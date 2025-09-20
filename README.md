@@ -1,6 +1,13 @@
 # -gripinvest_winter_internship_backend 
 A Dockerized backend API for an investment platform that allows users to invest in financial products, view portfolios, reset password ,add balance via verify OTP
 
+**#Tech Stack**
+Backend: Node.js, Express, JWT Authentication, MySQL ORM (Sequelize / Knex / Raw SQL)
+Frontend: React + Axios
+Database: MongoDb
+Containerization: Docker + Docker Compose
+
+AI Integration: GPT model for recommendations & summaries
 ## Table of Contents
 1. Overview
 2. Features
