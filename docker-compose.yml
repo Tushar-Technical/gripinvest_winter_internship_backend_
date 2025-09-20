@@ -1,0 +1,39 @@
+version: "3.9"
+
+services:
+  backend:
+    build: ./grip
+    container_name: grip_backend
+    ports:
+      - "3001:3001"
+    environment:
+      MONGO_URI: mongodb://mongo:27017/investment-product
+      JWT_SECRET: tarun1234
+    depends_on:
+      - mongo
+    # volumes:
+    #   - ./grip:/app
+    restart: always
+
+  frontend:
+    build: ./gripfrontend
+    container_name: grip_frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    # volumes:
+    #   - ./gripfrontend:/app
+    restart: always
+    
+  mongo:
+    image: mongo:6
+    container_name: grip_mongo
+    ports:
+      - "27017:27017"
+    # volumes:
+    #   - mongo_data:/data/db
+    restart: always
+
+# volumes:
+#   mongo_data:

@@ -1,0 +1,24 @@
+# Use Node.js image
+FROM node:18
+
+# Set working directory inside the container
+WORKDIR /app
+
+# Copy package.json and package-lock.json first
+COPY package*.json ./
+
+# Install dependencies
+RUN npm install
+# RUN npm install -g nodemon
+
+# Copy the rest of the source code
+COPY . .
+
+# Expose the backend port
+EXPOSE 3001
+
+# Start the server
+# CMD ["npm", "npm run seed && npm start"]
+# RUN npm install -g nodemon
+CMD ["sh", "-c"," npm run seed && npm start"]
+
