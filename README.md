@@ -30,6 +30,9 @@ A Dockerized backend API for an investment platform that allows users to invest 
 - Installing dependencies
 - Docker & Docker Compose
 - docker-compose up --build
+- To execute docker compose up --build successfully, the following prerequisites must be met:
+- Docker Engine must be installed and running on your system.
+  Docker Compose must be installed. If you are using Docker Desktop, Docker Compose is included. Otherwise, you may need to install it separately.
 
   
 - ## Postman Collection
